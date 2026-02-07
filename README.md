@@ -64,9 +64,7 @@ npm install
 Crea un archivo `.env` en la raíz del proyecto y agrega tu API Key del proveedor de clima:
 
 ```env
-PORT=3000
 WEATHER_API_KEY=tu_api_key_aqui
-BASE_URL=[https://api.weatherprovider.com](https://api.weatherprovider.com)
 
 ```
 

@@ -49,15 +49,15 @@ function App() {
     }
   };
 
-    return (
-      <div style={{ maxWidth: '600px', margin: '0 auto', padding: '2rem' }}>
-        <h1>⚽ Clima Mundial 2026 🌤️</h1>
-  
-        <CitySelector cities={cities} onCitySelect={fetchWeather} loading={loading} />
-  
-        <WeatherDisplay weather={weather} loading={loading} error={error} />
-      </div>
-    )
-  }
-  
-  export default App
+  return (
+    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '2rem' }}>
+      <h1>Clima Mundial 2026</h1>
+
+      <CitySelector cities={cities} onCitySelect={fetchWeather} loading={loading} />
+
+      <WeatherDisplay weather={weather} loading={loading} error={error} />
+    </div>
+  )
+}
+
+export default App

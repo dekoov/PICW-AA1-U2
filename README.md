@@ -1,16 +1,84 @@
-# React + Vite
+# World Cup 2026 Weather Tracker | PICW-AA1-U2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Proyecto Académico:** Servicio de consulta meteorológica para las sedes del Mundial 2026 consumiendo APIs externas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
 
-## React Compiler
+Este repositorio contiene la solución para la actividad **AA1-U2**. El objetivo principal es desarrollar un servicio backend capaz de conectarse con una API meteorológica externa (OpenWeather/WeatherAPI), procesar la información y "servir" el estado del clima actual para las ciudades anfitrionas del próximo Mundial de Fútbol en México, Estados Unidos y Canadá.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Objetivos del Proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este desarrollo busca cumplir con los siguientes puntos clave:
+
+1.  **Integración de APIs:** Demostrar la capacidad de consumir servicios RESTful de terceros mediante peticiones HTTP.
+2.  **Manejo de Datos JSON:** Parsear y estructurar la información recibida para entregar solo los datos relevantes (Temperatura, Humedad, Sensación Térmica).
+3.  **Lógica de Negocio:** Filtrar específicamente las sedes oficiales del torneo (ej. CDMX, Guadalajara, New York, Toronto, etc.).
+4.  **Despliegue Local:** Configurar un entorno de desarrollo funcional y documentado.
+
+---
+
+## Alcance
+
+* Consulta datos en tiempo real de un proveedor externo.
+* Lista el clima de las sedes pre-configuradas del Mundial 2026.
+* Maneja errores básicos (ej. si la API externa falla).
+* Entrega la información en formato JSON limpio.
+
+---
+
+## Instalación y Configuración
+
+Sigue estos pasos para correr el proyecto en tu máquina local.
+
+### 1. Prerrequisitos
+Asegúrate de tener instalado:
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (o Python según corresponda el código)
+* Un editor de código (VS Code recomendado).
+
+### 2. Clonar el Repositorio
+Descarga el código fuente:
+
+```bash
+git clone [https://github.com/dekoov/PICW-AA1-U2.git](https://github.com/dekoov/PICW-AA1-U2.git)
+cd PICW-AA1-U2
+
+```
+
+### 3. Instalar Dependencias
+
+Instala las librerías necesarias ejecutando:
+
+```bash
+npm install
+# O si usas Python: pip install -r requirements.txt
+
+```
+
+### 4. Variables de Entorno (.env)
+
+Crea un archivo `.env` en la raíz del proyecto y agrega tu API Key del proveedor de clima:
+
+```env
+PORT=3000
+WEATHER_API_KEY=tu_api_key_aqui
+BASE_URL=[https://api.weatherprovider.com](https://api.weatherprovider.com)
+
+```
+
+### 5. Ejecutar el Servidor
+
+Levanta el servicio:
+
+```bash
+npm start
+# O para modo desarrollo: npm run dev
+
+```
+
+---
+
